@@ -70,6 +70,8 @@ datafromCoredata()        // Do any additional setup after loading the view.
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! StroryTableViewCell
         let tempobject = storiesarray[indexPath.row]
         cell.story.text = tempobject.story
+        cell.storytitile.text = tempobject.title
+        
         cell.StoryLocation.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: (tempobject.lattitude?.doubleValue)!, longitude: (tempobject.longitude?.doubleValue)!), span: MKCoordinateSpan(latitudeDelta: (tempobject.lattitudeDelta?.doubleValue)!, longitudeDelta: (tempobject.longitudeDelta?.doubleValue)!)), animated: true)
         cell.storysnap.image = UIImage(named: "1.jpg")
         return cell

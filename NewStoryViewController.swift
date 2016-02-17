@@ -14,7 +14,7 @@ import CoreData
 class NewStoryViewController: UIViewController {
     @IBOutlet weak var mapview: MKMapView!
 
-    @IBOutlet weak var textfield: UITextView!
+    @IBOutlet weak var textfield: UITextField!
     
     @IBOutlet weak var titleOfStory: UITextField!
     override func viewDidLoad() {
