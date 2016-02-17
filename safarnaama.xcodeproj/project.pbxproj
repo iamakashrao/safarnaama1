@@ -88,12 +88,12 @@
 			children = (
 				F0571D791C74A73900015CB1 /* AppDelegate.swift */,
 				F0571D7B1C74A73900015CB1 /* ViewController.swift */,
+				F0571D901C74B1C500015CB1 /* SecViewController.swift */,
 				F0571D7D1C74A73900015CB1 /* Main.storyboard */,
 				F0571D831C74A73900015CB1 /* Assets.xcassets */,
 				F0571D851C74A73900015CB1 /* LaunchScreen.storyboard */,
 				F0571D881C74A73900015CB1 /* Info.plist */,
 				F0571D801C74A73900015CB1 /* safarnaama.xcdatamodeld */,
-				F0571D901C74B1C500015CB1 /* SecViewController.swift */,
 			);
 			path = safarnaama;
 			sourceTree = "<group>";
