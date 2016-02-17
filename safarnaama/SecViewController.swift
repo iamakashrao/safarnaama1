@@ -18,8 +18,7 @@ class SecViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+datafromCoredata()        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +28,7 @@ class SecViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
     
     
     override func viewDidAppear(animated: Bool) {
-        self.tableview.reloadData()
+      
         datafromCoredata()
     }
     
