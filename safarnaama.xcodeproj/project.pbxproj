@@ -21,6 +21,7 @@
 		F0571D9E1C74C62E00015CB1 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0571D9C1C74C62E00015CB1 /* Story.swift */; };
 		F0571DA01C74C83500015CB1 /* NewStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0571D9F1C74C83500015CB1 /* NewStoryViewController.swift */; };
 		F0571DA21C74CD0800015CB1 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0571DA11C74CD0800015CB1 /* 1.jpg */; };
+		F0571DA41C74E7D100015CB1 /* loginback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0571DA31C74E7D100015CB1 /* loginback.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F0571D9C1C74C62E00015CB1 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Story.swift; path = safarnaama/model/Story.swift; sourceTree = "<group>"; };
 		F0571D9F1C74C83500015CB1 /* NewStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewStoryViewController.swift; path = ../NewStoryViewController.swift; sourceTree = "<group>"; };
 		F0571DA11C74CD0800015CB1 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		F0571DA31C74E7D100015CB1 /* loginback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginback.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				F0571D921C74B80E00015CB1 /* StroryTableViewCell.swift */,
 				F0571D7D1C74A73900015CB1 /* Main.storyboard */,
 				F0571D831C74A73900015CB1 /* Assets.xcassets */,
+				F0571DA31C74E7D100015CB1 /* loginback.jpg */,
 				F0571DA11C74CD0800015CB1 /* 1.jpg */,
 				F0571D851C74A73900015CB1 /* LaunchScreen.storyboard */,
 				F0571D881C74A73900015CB1 /* Info.plist */,
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0571D871C74A73900015CB1 /* LaunchScreen.storyboard in Resources */,
+				F0571DA41C74E7D100015CB1 /* loginback.jpg in Resources */,
 				F0571DA21C74CD0800015CB1 /* 1.jpg in Resources */,
 				F0571D841C74A73900015CB1 /* Assets.xcassets in Resources */,
 				F0571D7F1C74A73900015CB1 /* Main.storyboard in Resources */,
