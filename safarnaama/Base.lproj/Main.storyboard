@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fu1-ZB-cKl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOq-TE-UOk">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOq-TE-UOk">
                                 <rect key="frame" x="20" y="39" width="560" height="541"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJk-ER-ZJd">
@@ -79,6 +79,7 @@
                             <constraint firstItem="zOq-TE-UOk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cj9-tu-uce"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9ph-Kd-LSc"/>
                     <connections>
                         <outlet property="password" destination="qQS-as-ngp" id="iUi-fq-i9t"/>
                         <outlet property="username" destination="HJk-ER-ZJd" id="mYQ-ON-Dz4"/>
@@ -87,9 +88,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="387" y="318"/>
+            <point key="canvasLocation" x="1199" y="318"/>
         </scene>
-        <!--Sec View Controller-->
+        <!--Stories-->
         <scene sceneID="RIm-9N-yNo">
             <objects>
                 <viewController id="tfo-EY-VKx" customClass="SecViewController" customModule="safarnaama" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,11 +103,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GmF-wc-be8">
-                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="320" id="0iR-qZ-mWP">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="320"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="320" id="0iR-qZ-mWP" customClass="StroryTableViewCell" customModule="safarnaama" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0iR-qZ-mWP" id="GlT-c9-wHa">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="319.5"/>
@@ -132,9 +133,23 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="StoryLocation" destination="BGq-hn-2KS" id="UKF-bm-7Gd"/>
+                                            <outlet property="image" destination="qL3-eC-aeN" id="ofa-NY-88W"/>
+                                            <outlet property="story" destination="4cu-cG-g38" id="VF2-Ug-ZVS"/>
+                                            <outlet property="storysnap" destination="qL3-eC-aeN" id="9Bq-Kn-8PY"/>
+                                            <outlet property="storytitile" destination="0JF-N1-Ns6" id="Dyi-dM-gER"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tfo-EY-VKx" id="LT6-cu-gIv"/>
+                                    <outlet property="delegate" destination="tfo-EY-VKx" id="sM1-EA-sx3"/>
+                                </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHh-d9-Bie">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -144,10 +159,130 @@
                             <constraint firstItem="GmF-wc-be8" firstAttribute="top" secondItem="2El-Sb-ge7" secondAttribute="bottom" constant="8" id="yaF-sd-yp1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Stories" id="4xg-q2-OBH">
+                        <barButtonItem key="rightBarButtonItem" title="newStory" id="fJn-mh-mFS">
+                            <connections>
+                                <segue destination="mY7-O6-5zA" kind="show" id="Xer-o8-fTh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableview" destination="GmF-wc-be8" id="kwa-7K-aJf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVa-YC-Fya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="318"/>
+            <point key="canvasLocation" x="1829" y="318"/>
+        </scene>
+        <!--New Story-->
+        <scene sceneID="kw1-yP-IgC">
+            <objects>
+                <viewController id="mY7-O6-5zA" customClass="NewStoryViewController" customModule="safarnaama" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VTz-cE-C11"/>
+                        <viewControllerLayoutGuide type="bottom" id="4TR-wX-Z7B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FUY-3H-DGT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfH-cg-puy">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xT9-jC-980">
+                                <rect key="frame" x="20" y="85" width="560" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="wDq-mE-m9F"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="mY7-O6-5zA" id="xN0-RM-y3L"/>
+                                </connections>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Title of your story" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZYy-ho-FIj">
+                                <rect key="frame" x="37" y="318" width="550" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fol-7o-Lzv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter the details and choose your location on map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3H-fV-ocN">
+                                <rect key="frame" x="94" y="253" width="437" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WPX-hB-lnB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TXj-sM-xif">
+                                <rect key="frame" x="37" y="376" width="550" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xT9-jC-980" firstAttribute="leading" secondItem="FUY-3H-DGT" secondAttribute="leadingMargin" id="4vu-U7-oPu"/>
+                            <constraint firstItem="xT9-jC-980" firstAttribute="top" secondItem="VTz-cE-C11" secondAttribute="bottom" constant="21" id="72v-Yt-pQC"/>
+                            <constraint firstItem="TXj-sM-xif" firstAttribute="top" secondItem="ZYy-ho-FIj" secondAttribute="bottom" constant="28" id="Dft-m9-HPN"/>
+                            <constraint firstItem="xT9-jC-980" firstAttribute="trailing" secondItem="FUY-3H-DGT" secondAttribute="trailingMargin" id="GPT-nn-fdd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TXj-sM-xif" secondAttribute="trailing" constant="-7" id="Hc1-IS-d5L"/>
+                            <constraint firstItem="ZYy-ho-FIj" firstAttribute="top" secondItem="s3H-fV-ocN" secondAttribute="bottom" constant="44" id="KU5-Bp-Wdn"/>
+                            <constraint firstItem="s3H-fV-ocN" firstAttribute="leading" secondItem="FUY-3H-DGT" secondAttribute="leadingMargin" constant="74" id="Ssp-9q-gWc"/>
+                            <constraint firstItem="s3H-fV-ocN" firstAttribute="top" secondItem="xT9-jC-980" secondAttribute="bottom" constant="40" id="UTF-rE-req"/>
+                            <constraint firstItem="ZYy-ho-FIj" firstAttribute="top" secondItem="s3H-fV-ocN" secondAttribute="bottom" constant="44" id="VZk-ke-zAD"/>
+                            <constraint firstItem="4TR-wX-Z7B" firstAttribute="top" secondItem="TXj-sM-xif" secondAttribute="bottom" constant="52" id="cHp-dr-zX3"/>
+                            <constraint firstItem="TXj-sM-xif" firstAttribute="leading" secondItem="FUY-3H-DGT" secondAttribute="leadingMargin" constant="17" id="hKx-Kf-6mH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZYy-ho-FIj" secondAttribute="trailing" constant="-7" id="lYf-mt-cfy"/>
+                            <constraint firstItem="ZYy-ho-FIj" firstAttribute="leading" secondItem="FUY-3H-DGT" secondAttribute="leadingMargin" constant="17" id="qDq-vg-B7E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s3H-fV-ocN" secondAttribute="trailing" constant="49" id="sdd-9m-rGL"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="New Story" id="8cx-Xq-Wew">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NaH-cR-aWL">
+                            <connections>
+                                <action selector="cancelTapped:" destination="mY7-O6-5zA" id="gLb-BF-ChR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="7lS-ha-uWm">
+                            <connections>
+                                <action selector="addtoCoreData:" destination="mY7-O6-5zA" id="DV4-51-Gh7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapview" destination="xT9-jC-980" id="iYR-Bb-WCk"/>
+                        <outlet property="textfield" destination="TXj-sM-xif" id="pBz-t6-9Og"/>
+                        <outlet property="title" destination="ZYy-ho-FIj" id="xYm-ly-8SY"/>
+                        <outlet property="titleOfStory" destination="ZYy-ho-FIj" id="FuX-JW-qCP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dkc-Af-Rmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2517" y="318"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uNh-8E-AEu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fu1-ZB-cKl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lLd-Ak-sFR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="spo-1P-oB5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hF2-UW-yJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="318"/>
         </scene>
     </scenes>
 </document>
