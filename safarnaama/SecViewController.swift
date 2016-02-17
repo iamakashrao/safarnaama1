@@ -63,7 +63,20 @@ datafromCoredata()        // Do any additional setup after loading the view.
     }
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detailview"{
+            
+            let dvc = segue.destinationViewController as! detailViewController
+            
+            
+    }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("detailview", sender: nil)
+        
+        
+        
+    }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
