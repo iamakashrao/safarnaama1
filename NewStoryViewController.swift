@@ -15,6 +15,7 @@ class NewStoryViewController: UIViewController {
     @IBOutlet weak var mapview: MKMapView!
 
     @IBOutlet weak var textfield: UITextView!
+    
     @IBOutlet weak var titleOfStory: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +32,12 @@ class NewStoryViewController: UIViewController {
     @IBAction func addtoCoreData(sender: UIBarButtonItem) {
         
         addData()
+        
+        navigationController?.popViewControllerAnimated(true)
     }
     
     @IBAction func cancelTapped(sender: UIBarButtonItem) {
-        
-        self.dismissViewControllerAnimated(true, completion:nil)
-        
+        navigationController?.popViewControllerAnimated(true)
     }
     
     func addData(){
@@ -59,14 +60,5 @@ class NewStoryViewController: UIViewController {
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

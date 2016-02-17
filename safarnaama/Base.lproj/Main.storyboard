@@ -189,15 +189,6 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfH-cg-puy">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xT9-jC-980">
-                                <rect key="frame" x="20" y="85" width="560" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="wDq-mE-m9F"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="mY7-O6-5zA" id="xN0-RM-y3L"/>
-                                </connections>
-                            </mapView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Title of your story" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZYy-ho-FIj">
                                 <rect key="frame" x="37" y="318" width="550" height="30"/>
                                 <constraints>
@@ -222,6 +213,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xT9-jC-980">
+                                <rect key="frame" x="20" y="85" width="560" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="wDq-mE-m9F"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="mY7-O6-5zA" id="xN0-RM-y3L"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -258,8 +258,7 @@
                     <connections>
                         <outlet property="mapview" destination="xT9-jC-980" id="iYR-Bb-WCk"/>
                         <outlet property="textfield" destination="TXj-sM-xif" id="pBz-t6-9Og"/>
-                        <outlet property="title" destination="ZYy-ho-FIj" id="xYm-ly-8SY"/>
-                        <outlet property="titleOfStory" destination="ZYy-ho-FIj" id="FuX-JW-qCP"/>
+                        <outlet property="titleOfStory" destination="ZYy-ho-FIj" id="Jfi-RK-ZM7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dkc-Af-Rmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
