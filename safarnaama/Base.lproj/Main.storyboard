@@ -200,7 +200,7 @@
                                             <outlet property="StoryLocation" destination="BGq-hn-2KS" id="UKF-bm-7Gd"/>
                                             <outlet property="story" destination="4cu-cG-g38" id="VF2-Ug-ZVS"/>
                                             <outlet property="storytitile" destination="0JF-N1-Ns6" id="Dyi-dM-gER"/>
-                                            <segue destination="pFn-Eu-5Io" kind="show" id="W18-dH-vWi"/>
+                                            <segue destination="pFn-Eu-5Io" kind="show" identifier="detailview" id="W18-dH-vWi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

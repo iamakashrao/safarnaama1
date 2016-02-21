@@ -16,6 +16,7 @@ class SecViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
     
     var storiesarray:[Story] = []
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 datafromCoredata()        // Do any additional setup after loading the view.
@@ -62,6 +63,28 @@ datafromCoredata()        // Do any additional setup after loading the view.
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return storiesarray.count
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        
+        
+        
+        performSegueWithIdentifier("detailview", sender: nil)
+    
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        if segue.identifier == "detailview"{
+         
+            let dvc = segue.destinationViewController as!detailViewController
+            
+            dvc.temptitle =
+            
+            
+        }
+    }
+    
     
     
     
