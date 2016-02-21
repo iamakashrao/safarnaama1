@@ -56,27 +56,13 @@ datafromCoredata()        // Do any additional setup after loading the view.
         
     }
    
+   
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return storiesarray.count
     }
     
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "detailview"{
-            
-            let dvc = segue.destinationViewController as! detailViewController
-            
-            
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("detailview", sender: nil)
-        
-        
-        
-    }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
@@ -86,7 +72,7 @@ datafromCoredata()        // Do any additional setup after loading the view.
         cell.storytitile.text = tempobject.title
         
         cell.StoryLocation.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: (tempobject.lattitude?.doubleValue)!, longitude: (tempobject.longitude?.doubleValue)!), span: MKCoordinateSpan(latitudeDelta: (tempobject.lattitudeDelta?.doubleValue)!, longitudeDelta: (tempobject.longitudeDelta?.doubleValue)!)), animated: true)
-        cell.storysnap.image = UIImage(named: "1.jpg")
+      
         return cell
     }
 }

@@ -2,14 +2,19 @@
 //  detailViewController.swift
 //  safarnaama
 //
-//  Created by chitranjan on 18/02/16.
+//  Created by chitranjan on 22/02/16.
 //  Copyright © 2016 void. All rights reserved.
 //
 
 import UIKit
+import MapKit
+
 
 class detailViewController: UIViewController {
 
+    @IBOutlet weak var story: UILabel!
+    @IBOutlet weak var mystory: MKMapView!
+    @IBOutlet weak var titleofthestory: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +27,5 @@ class detailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

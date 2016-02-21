@@ -16,7 +16,7 @@ class StroryTableViewCell: UITableViewCell {
     @IBOutlet weak var story: UILabel!
 
     @IBOutlet weak var StoryLocation: MKMapView!
-    @IBOutlet weak var storysnap : UIImageView!
+   
     
     
 }
