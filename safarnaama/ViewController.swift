@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         myRootRef.authUser(username.text, password: password.text,
             withCompletionBlock: { error, authData in
                 if error != nil {
-                    print("error in loggin in \(error)")
+                      self.Customalert("Error- Please check your email and password ", message: "\(error)")
                 } else {
                     
                    self.performSegueWithIdentifier("logindone", sender: nil)
@@ -46,7 +46,12 @@ class ViewController: UIViewController {
         myRootRef.createUser(username.text, password: password.text,
             withValueCompletionBlock: { error, result in
                 if error != nil {
-                    // There was an error creating the account
+                    
+                    
+                    
+                    self.Customalert("error in creating account", message: "\(error)")
+                    
+                    
                 } else {
                     let uid = result["uid"] as? String
                     print("Successfully created user account with uid: \(uid)")

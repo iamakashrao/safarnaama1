@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import MapKit
+import Social
 
 class SecViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
@@ -64,27 +65,36 @@ datafromCoredata()        // Do any additional setup after loading the view.
         return storiesarray.count
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
+        let tempobject = storiesarray[indexPath.row]
+        let title = tempobject.title!
+        let storyy = tempobject.story!
         
+        let shareaction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share") { (action, indexpath) -> Void in
+            print("asdasd")
+            if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+                let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                
+                
+                fbShare.setInitialText("This place is awsome ... add it your bucket list \(title) and my story is \(storyy) ")
+                fbShare.setEditing(true, animated: true)
+                
+                
+                self.presentViewController(fbShare, animated: true, completion: nil)
+                
+            } else {
+                let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         
-        performSegueWithIdentifier("detailview", sender: nil)
-    
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
-        if segue.identifier == "detailview"{
-         
-            let dvc = segue.destinationViewController as!detailViewController
-            
-            dvc.temptitle =
-            
-            
         }
+        
+         return [shareaction]
     }
-    
+  
     
     
     

@@ -23,7 +23,6 @@
 		F0571DA21C74CD0800015CB1 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0571DA11C74CD0800015CB1 /* 1.jpg */; };
 		F0571DA41C74E7D100015CB1 /* loginback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0571DA31C74E7D100015CB1 /* loginback.jpg */; };
 		F0571DA61C74F30800015CB1 /* path.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0571DA51C74F30800015CB1 /* path.jpg */; };
-		F0F047C61C7A3B0A00626B4D /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F047C51C7A3B0A00626B4D /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		F0571DA11C74CD0800015CB1 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		F0571DA31C74E7D100015CB1 /* loginback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginback.jpg; sourceTree = "<group>"; };
 		F0571DA51C74F30800015CB1 /* path.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = path.jpg; sourceTree = "<group>"; };
-		F0F047C51C7A3B0A00626B4D /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,6 @@
 				F0571D851C74A73900015CB1 /* LaunchScreen.storyboard */,
 				F0571D881C74A73900015CB1 /* Info.plist */,
 				F0571D801C74A73900015CB1 /* safarnaama.xcdatamodeld */,
-				F0F047C51C7A3B0A00626B4D /* detailViewController.swift */,
 			);
 			path = safarnaama;
 			sourceTree = "<group>";
@@ -257,7 +254,6 @@
 			files = (
 				F0571D9E1C74C62E00015CB1 /* Story.swift in Sources */,
 				F0571DA01C74C83500015CB1 /* NewStoryViewController.swift in Sources */,
-				F0F047C61C7A3B0A00626B4D /* detailViewController.swift in Sources */,
 				F0571D911C74B1C500015CB1 /* SecViewController.swift in Sources */,
 				F0571D931C74B80E00015CB1 /* StroryTableViewCell.swift in Sources */,
 				F0571D7C1C74A73900015CB1 /* ViewController.swift in Sources */,

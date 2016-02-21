@@ -200,7 +200,6 @@
                                             <outlet property="StoryLocation" destination="BGq-hn-2KS" id="UKF-bm-7Gd"/>
                                             <outlet property="story" destination="4cu-cG-g38" id="VF2-Ug-ZVS"/>
                                             <outlet property="storytitile" destination="0JF-N1-Ns6" id="Dyi-dM-gER"/>
-                                            <segue destination="pFn-Eu-5Io" kind="show" identifier="detailview" id="W18-dH-vWi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -235,46 +234,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVa-YC-Fya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1830" y="306"/>
-        </scene>
-        <!--Detail View Controller-->
-        <scene sceneID="L5k-kL-4ab">
-            <objects>
-                <viewController id="pFn-Eu-5Io" customClass="detailViewController" customModule="safarnaama" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aK3-gb-7ur"/>
-                        <viewControllerLayoutGuide type="bottom" id="s01-r2-pQa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gea-Xa-xU9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pjN-aG-b4x">
-                                <rect key="frame" x="0.0" y="166" width="600" height="213"/>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwn-zU-8rP">
-                                <rect key="frame" x="0.0" y="92" width="600" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGY-CT-Xxn">
-                                <rect key="frame" x="0.0" y="438" width="600" height="122"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="mystory" destination="pjN-aG-b4x" id="1tE-O9-dDY"/>
-                        <outlet property="story" destination="HGY-CT-Xxn" id="RSz-j4-F7A"/>
-                        <outlet property="titleofthestory" destination="qwn-zU-8rP" id="GJU-vU-nmb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1ys-xQ-9uW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1830" y="1042"/>
         </scene>
         <!--New Story-->
         <scene sceneID="kw1-yP-IgC">
