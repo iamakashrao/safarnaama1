@@ -10,12 +10,14 @@ import UIKit
 import CoreData
 import MapKit
 import Social
+import Firebase
 
 class SecViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet weak var tableview: UITableView!
     
     var storiesarray:[Story] = []
+    let myRootRef = Firebase(url: "https://safarnaama.firebaseio.com")
 
     
     override func viewDidLoad() {
@@ -95,7 +97,15 @@ datafromCoredata()        // Do any additional setup after loading the view.
          return [shareaction]
     }
   
+  
     
+    @IBAction func logoutTapped(sender: UIBarButtonItem) {
+        
+        myRootRef.unauth()
+       performSegueWithIdentifier("logout", sender:nil)
+   self.navigationItem.setHidesBackButton(true, animated:true);
+        
+    }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
@@ -106,6 +116,8 @@ datafromCoredata()        // Do any additional setup after loading the view.
         
         cell.StoryLocation.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: (tempobject.lattitude?.doubleValue)!, longitude: (tempobject.longitude?.doubleValue)!), span: MKCoordinateSpan(latitudeDelta: (tempobject.lattitudeDelta?.doubleValue)!, longitudeDelta: (tempobject.longitudeDelta?.doubleValue)!)), animated: true)
       
+       
+        
         return cell
     }
 }

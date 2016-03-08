@@ -14,15 +14,33 @@ import CoreData
 class NewStoryViewController: UIViewController {
     @IBOutlet weak var mapview: MKMapView!
 
-    @IBOutlet weak var textfield: UITextField!
+    @IBOutlet weak var textview: UITextView!
+    
     
     @IBOutlet weak var titleOfStory: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(animated: Bool) {
+        
+        self.mapview.layer.cornerRadius = self.mapview.frame.width/10
+        self.mapview.clipsToBounds = true
+        self.mapview.layer.borderColor = UIColor.whiteColor().CGColor
+        self.mapview.layer.borderWidth = 4
+        
+        
+        textview.userInteractionEnabled = true
+        textview.editable = true
+        
+      
+        
+        textview.layer.borderWidth = 2
+        
+        
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -51,7 +69,7 @@ class NewStoryViewController: UIViewController {
         Storyobj.lattitudeDelta = self.mapview.region.span.latitudeDelta
         Storyobj.longitudeDelta = self.mapview.region.span.longitudeDelta
         Storyobj.title = titleOfStory.text
-        Storyobj.story = textfield.text
+        Storyobj.story = textview.text
         
         do {
             try context.save()

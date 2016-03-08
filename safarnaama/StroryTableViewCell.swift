@@ -17,7 +17,23 @@ class StroryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var StoryLocation: MKMapView!
    
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    StoryLocation.layer.cornerRadius = StoryLocation.frame.size.width/10
+    StoryLocation.clipsToBounds = true
+        
+        StoryLocation.layer.borderWidth = 4
+        StoryLocation.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        
+        story.layer.cornerRadius = 2
+        story.layer.borderWidth = 2
+        story.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        
+        
+    }
     
 }
 

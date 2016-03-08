@@ -23,6 +23,7 @@
 		F0571DA21C74CD0800015CB1 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0571DA11C74CD0800015CB1 /* 1.jpg */; };
 		F0571DA41C74E7D100015CB1 /* loginback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0571DA31C74E7D100015CB1 /* loginback.jpg */; };
 		F0571DA61C74F30800015CB1 /* path.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0571DA51C74F30800015CB1 /* path.jpg */; };
+		F0BB3DB31C8F0D60004FD00A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB3DB21C8F0D60004FD00A /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		F0571DA11C74CD0800015CB1 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		F0571DA31C74E7D100015CB1 /* loginback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginback.jpg; sourceTree = "<group>"; };
 		F0571DA51C74F30800015CB1 /* path.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = path.jpg; sourceTree = "<group>"; };
+		F0BB3DB21C8F0D60004FD00A /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				F0571D9B1C74C62E00015CB1 /* Story+CoreDataProperties.swift */,
 				F0571D9C1C74C62E00015CB1 /* Story.swift */,
+				F0BB3DB21C8F0D60004FD00A /* SignupViewController.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				TargetAttributes = {
 					F0571D751C74A73900015CB1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = S2Z6K6B23N;
 					};
 				};
 			};
@@ -252,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0BB3DB31C8F0D60004FD00A /* SignupViewController.swift in Sources */,
 				F0571D9E1C74C62E00015CB1 /* Story.swift in Sources */,
 				F0571DA01C74C83500015CB1 /* NewStoryViewController.swift in Sources */,
 				F0571D911C74B1C500015CB1 /* SecViewController.swift in Sources */,
@@ -371,6 +376,8 @@
 			baseConfigurationReference = 780CAFE0762FE1DC79388BDB /* Pods-safarnaama.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -379,6 +386,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.void.safarnaama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -387,6 +395,8 @@
 			baseConfigurationReference = B196861DF07382752801C2A6 /* Pods-safarnaama.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -395,6 +405,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.void.safarnaama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
