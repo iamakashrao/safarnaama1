@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import MapKit
+import Social
 
 class SecViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
@@ -16,6 +17,7 @@ class SecViewController: UIViewController,UITableViewDataSource,UITableViewDeleg
     
     var storiesarray:[Story] = []
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 datafromCoredata()        // Do any additional setup after loading the view.
@@ -56,13 +58,43 @@ datafromCoredata()        // Do any additional setup after loading the view.
         
     }
    
+   
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return storiesarray.count
     }
     
-    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        
+        let tempobject = storiesarray[indexPath.row]
+        let title = tempobject.title!
+        let storyy = tempobject.story!
+        
+        let shareaction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share") { (action, indexpath) -> Void in
+            print("asdasd")
+            if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+                let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                
+                
+                fbShare.setInitialText("This place is awsome ... add it your bucket list \(title) and my story is \(storyy) ")
+                fbShare.setEditing(true, animated: true)
+                
+                
+                self.presentViewController(fbShare, animated: true, completion: nil)
+                
+            } else {
+                let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        
+        }
+        
+         return [shareaction]
+    }
+  
     
     
     
@@ -73,7 +105,7 @@ datafromCoredata()        // Do any additional setup after loading the view.
         cell.storytitile.text = tempobject.title
         
         cell.StoryLocation.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: (tempobject.lattitude?.doubleValue)!, longitude: (tempobject.longitude?.doubleValue)!), span: MKCoordinateSpan(latitudeDelta: (tempobject.lattitudeDelta?.doubleValue)!, longitudeDelta: (tempobject.longitudeDelta?.doubleValue)!)), animated: true)
-        cell.storysnap.image = UIImage(named: "1.jpg")
+      
         return cell
     }
 }
